@@ -1,5 +1,4 @@
 import useSWR from 'swr';
-import Content from "./content";
 import styles from '../styles/ctable.module.css';
 
 
