@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  width: 100%;
+  background: #353535;
+  box-shadow:  4px 4px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 0 2rem;
+}
+.container h3{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.container p{
+  font-size: 1.6rem;
+  font-style: normal;
+}

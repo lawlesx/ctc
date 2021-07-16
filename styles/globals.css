@@ -1,16 +1,67 @@
-html,
-body {
+*{
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
+}
+
+body {
+  background-color: #353535;
+  font-family: "Raleway", sans-serif;
+  color: #f6f6f6;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: none;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #9f9f9f;
+  border-radius: 20px;
+  border: 3px solid #353535;
+}
+
+.header {
+  width: 90vw;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1{
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.drop-down {
+  width: 17rem;
+  height: 5rem;
+  background: #353535;
+  box-shadow:  4px 4px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  color: #C4C4C4;
+}
+.tri-container {
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  width: 3rem;
+}
+
+.tri {
+  clip-path: polygon(50% 80%, 0 30%, 100% 30%);
+  background-color: #585858;
+  height: 2rem;
+  width: 2rem;
+  padding-top: 10px;
 }
