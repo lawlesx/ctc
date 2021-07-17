@@ -62,7 +62,7 @@ export default function Home() {
       <Head>
         <title>CTC</title>
         <meta name="description" content="Coinvise Technical Challenge" />
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="CTC.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>

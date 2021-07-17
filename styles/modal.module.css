@@ -45,6 +45,10 @@
   border: 3px solid transparent;
 }
 
+.inner p{
+  cursor: pointer;
+}
+
 .cross{
   position: fixed;
   right: 2rem;
@@ -54,6 +58,7 @@
   display: grid;
   place-items: center;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 .line1{
   height: 3px;
