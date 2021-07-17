@@ -50,6 +50,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 0 1.5rem;
   color: #C4C4C4;
+  cursor: pointer;
 }
 .tri-container {
   display: grid;

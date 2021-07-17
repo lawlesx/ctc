@@ -1,0 +1,81 @@
+.container {
+  z-index: 1;
+  background-color: rgba(2, 2, 2, 0.5);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  backdrop-filter: blur( 4px );
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  height: 40rem;
+  width: 30rem;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  border-radius: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.inner {
+  height: 35rem;
+  width: 20rem;
+  overflow-y: scroll;
+  display: grid;
+  place-items: center;
+}
+.inner::-webkit-scrollbar {
+  width: 5px;
+
+}
+.inner::-webkit-scrollbar-track {
+  background-color: none;
+}
+.inner::-webkit-scrollbar-thumb {
+  background-color: #9f9f9f;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+.cross{
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: grid;
+  place-items: center;
+  transform: rotate(45deg);
+}
+.line1{
+  height: 3px;
+  width: 1.5rem;
+  background-color: #f6f6f6;
+  position: absolute;
+  border-radius: 5px;
+}
+.line2{
+  height: 1.5rem;
+  width: 3px;
+  background-color: #f6f6f6;
+  position: absolute;
+  border-radius: 5px;
+}
+.modal p{
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 19rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid #f6f6f6;
+
+}
