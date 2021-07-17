@@ -82,5 +82,24 @@
   width: 19rem;
   padding: 0 1rem;
   border-bottom: 1px solid #f6f6f6;
-
+}
+@media screen and (max-width: 768px) {
+  .modal {
+    height: 35rem;
+    width: 20rem;
+  }
+  .cross{
+    right: 1rem;
+    top: 1rem;
+  }
+  .inner {
+    height: 35rem;
+    width: 15rem;
+    overflow-x: hidden;
+  }
+  .modal p{
+    font-size: 1rem;
+    height: 4rem;
+    width: 15rem;
+  }
 }
