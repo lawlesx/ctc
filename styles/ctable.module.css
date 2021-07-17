@@ -71,7 +71,8 @@
 .contract_address {
   width: 20rem;
   overflow-x: hidden;
-  text-overflow:    ellipsis;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .error {
@@ -86,4 +87,36 @@
   font-size: 7rem;
   font-weight: 400;
   color: #3D3D3D;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .top {
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+  }
+  .bot h3{
+    font-size: 1rem;
+  }
+  .bot p{
+    font-size: 1rem;
+  }
+  .item h3{
+    font-size: 1rem;
+  }
+  .item p{
+    font-size: 1rem;
+  }
+  .contract_address {
+    width: 10rem;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+  .error h1{
+    font-size: 4rem;
+  }
+  
 }

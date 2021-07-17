@@ -83,8 +83,6 @@ const Modal: React.FC<ModalProps> = ({setModal , data , setCoin}) => {
               ))
             }
           </motion.div>
-          
-  
           <motion.div variants={crossVariants} animate='visible' whileHover='hover' className={styles.cross} onClick={()=>setModal(false)}>
             <div className={styles.line1}></div>
             <div className={styles.line2}></div>

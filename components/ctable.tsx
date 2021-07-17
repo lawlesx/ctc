@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from '../styles/ctable.module.css';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -43,6 +44,8 @@ const errorVariants = {
  
 const Ctable: React.FC<CtableProps> = ({data , coin}) => {
 
+  const [clipboard, setClipboard] = useState('');
+
   return ( 
     data!=undefined ?
     <motion.div className={styles.container}>
@@ -67,9 +70,15 @@ const Ctable: React.FC<CtableProps> = ({data , coin}) => {
           <h3>All-time-Low</h3>
           <p>{data.market_data.atl[coin]}</p>
         </motion.div>
-        <motion.div variants={itemVariants} whileHover='hover' className={styles.item}>
+        <motion.div variants={itemVariants} whileHover='hover' className={styles.item} onClick={() => navigator.clipboard.writeText(clipboard)}>
           <h3>Contract Address</h3>
-          <p className={styles.contract_address}>{data.contract_address}</p>
+          <p className={styles.contract_address} onClick={() => {
+              setClipboard(data.contract_address)
+              alert('Copied to Clipboard')
+            }
+            }>
+            {data.contract_address}
+          </p>
         </motion.div>
         <motion.div variants={itemVariants} whileHover='hover' className={styles.item}>
           <h3>Full Diluted MC</h3>
