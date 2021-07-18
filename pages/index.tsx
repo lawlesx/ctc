@@ -8,6 +8,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const fetcher = async(path : string) => {
   const res = await fetch(path);
+
+  if (!res.ok) {
+    throw new Error('An error occurred while fetching the data.')
+  }
   
   return res.json();
 }
@@ -55,7 +59,7 @@ export default function Home() {
   const [modal, setModal] = useState(false);
   const [coin, setCoin] = useState("usd");
   const { data, error } = useSWR('https://api.coingecko.com/api/v3/coins/global-coin-research', fetcher);
-
+  console.log("Error",error);
 
   return (
     <div className={styles.container}>
@@ -76,7 +80,10 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
-      <Ctable data={data} coin={coin}/>
+      {
+        error==undefined ? <Ctable data={data} coin={coin}/> : <div className={styles.error}><h1>{error.message}</h1></div>
+      }
+      
       <AnimatePresence>
       {
         modal && <Modal setModal={setModal} data={data.market_data.ath} setCoin={setCoin}/>
