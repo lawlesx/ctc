@@ -59,7 +59,6 @@ export default function Home() {
   const [modal, setModal] = useState(false);
   const [coin, setCoin] = useState("usd");
   const { data, error } = useSWR('https://api.coingecko.com/api/v3/coins/global-coin-research', fetcher);
-  console.log("Error",error);
 
   return (
     <div className={styles.container}>
